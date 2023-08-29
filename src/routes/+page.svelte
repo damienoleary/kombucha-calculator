@@ -5,7 +5,7 @@
 	$: teaConcentrate = format(teaConcentrateRaw);
 	$: coolWaterRaw = Math.round(normalisedLiters * 705);
 	$: coolWater = format(coolWaterRaw);
-	$: totalWater = format(parseInt(teaConcentrate) + parseInt(coolWater));
+	$: totalWater = format(teaConcentrateRaw + coolWaterRaw);
 	$: teaBags = format(Math.max(1, Math.round(normalisedLiters * 1.5)));
 	$: sugar = format(Math.round(normalisedLiters * 50));
 	$: starterLiquid = format(Math.round(normalisedLiters * 60));
