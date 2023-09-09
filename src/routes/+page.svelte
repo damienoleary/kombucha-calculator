@@ -63,16 +63,17 @@
 	div.recipe {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
-		width: 56em;
+		justify-content: space-around;
+		max-width: 56em;
 		margin: 0 auto;
 	}
 
 	div.recipe > div {
-		width: 20em;
-		padding: 2em;
+		min-width: 20em;
+		padding: 1.2em;
 		justify-content: space-between;
 		display: flex;
+		border-bottom: 1px solid lightgray;
 	}
 
 	div.recipe > div > div {
