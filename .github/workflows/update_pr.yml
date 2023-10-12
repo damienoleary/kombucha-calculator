@@ -10,7 +10,7 @@ jobs:
       - uses: octokit/request-action@v2.x
         id: get_latest_release
         with:
-          route: GET /repos/{owner}/{repo}/releases/latest
+          route: GET /repos/damienoleary/kombucha-calculator/releases/latest
           owner: octokit
           repo: request-action
         env:
