@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   logLatestRelease:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: octokit/request-action@v2.x
