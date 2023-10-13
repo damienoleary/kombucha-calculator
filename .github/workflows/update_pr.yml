@@ -17,5 +17,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REQUEST_BODY: |
-           {"expected_head_sha": "dbb337c83749c253cfc0d35bbbcb01eb1b463b9b"}
+           {"expected_head_sha": "686a73cc3dd0163271f6cc83b4bb5659a4c23207"}
       - run: "echo latest release: '${{ steps.get_latest_release.outputs.data }}'"
