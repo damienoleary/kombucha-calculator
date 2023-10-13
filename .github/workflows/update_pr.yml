@@ -12,7 +12,7 @@ jobs:
         id: get_latest_release
         with:
           route: PUT /repos/damienoleary/kombucha-calculator/pulls/22/update-branch
-          expected_head_sha: sdif
+          expected_head_sha: 4dfa00ff7dfbd2b4b5d97f0b2f2f9d768cba5f8b
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: "echo latest release: '${{ steps.get_latest_release.outputs.data }}'"
