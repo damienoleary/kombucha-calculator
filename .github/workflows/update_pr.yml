@@ -11,8 +11,9 @@ jobs:
       - uses: octokit/request-action@v2.x
         id: get_latest_release
         with:
-          route: PUT /repos/damienoleary/kombucha-calculator/pulls/{PULL_REQUEST_ID}/update-branch
+          route: PUT /repos/damienoleary/kombucha-calculator/pulls/{pull_number}/update-branch
           expected_head_sha: 37c702ada2058ac9db051dd8a342b1a1e7f31ed9
+          pull_number: 22
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PULL_REQUEST_ID: 22
