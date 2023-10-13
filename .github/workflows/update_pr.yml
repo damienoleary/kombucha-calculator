@@ -13,7 +13,9 @@ jobs:
         with:
           route: PUT /repos/damienoleary/kombucha-calculator/pulls/22/update-branch
           mediaType: application/json
+          body: ${{ toJSON(env.REQUEST_BODY) }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          INPUT_BODY: '{"expected_head_sha": "dbb337c83749c253cfc0d35bbbcb01eb1b463b9b"}'
+          REQUEST_BODY: |
+           {"expected_head_sha": "dbb337c83749c253cfc0d35bbbcb01eb1b463b9b"}
       - run: "echo latest release: '${{ steps.get_latest_release.outputs.data }}'"
