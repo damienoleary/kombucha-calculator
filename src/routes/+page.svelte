@@ -17,7 +17,7 @@
 </script>
 
 <div class="container">
-	<h1>Kombucha Recipe</h1>
+	<h1>Kombucha Recipe Woo</h1>
 	<div class="recipe">
 		<div>
 			<div>Liters:</div>
