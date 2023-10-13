@@ -23,7 +23,7 @@ jobs:
       - uses: octokit/request-action@v2.x
         id: get_latest_release
         with:
-          route: POST /repos/damienoleary/kombucha-calculator/actions/workflows/deploy_pr/dispatches
+          route: POST /repos/damienoleary/kombucha-calculator/actions/workflows/deploy_pr.yml/dispatches
           ref: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
