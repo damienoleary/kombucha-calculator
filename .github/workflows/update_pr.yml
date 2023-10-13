@@ -19,6 +19,7 @@ jobs:
           PULL_REQUEST_ID: 22
       - run: "echo latest release: '${{ steps.get_latest_release.outputs.data }}'"
   triggerDeployment:
+    needs: logLatestRelease
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
