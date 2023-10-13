@@ -5,14 +5,14 @@ on:
       - main
 jobs:
   logLatestRelease:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: octokit/request-action@v2.x
         id: get_latest_release
         with:
-          route: PUT /repos/damienoleary/kombucha-calculator/pulls/PULL_NUMBER/update-branch
-          mediatType: application/json
-          
+          route: PUT /repos/damienoleary/kombucha-calculator/pulls/22/update-branch
+          expected_head_sha: 686a73cc3dd0163271f6cc83b4bb5659a4c23207
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: "echo latest release: '${{ steps.get_latest_release.outputs.data }}'"
